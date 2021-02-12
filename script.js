@@ -130,3 +130,14 @@ function setTimeBlockClass() {
            $("#sixText").addClass("past");
         }
 }});
+    // set up buttons in all fields to save input data to local storage
+    function setButtons () {
+
+        $("#nineButton").on("click",function(){   
+            var nine = $.trim($("#nineText").val());          
+                localStorage.setItem ('nine', nine);               
+         })
+
+         
+
+    }
