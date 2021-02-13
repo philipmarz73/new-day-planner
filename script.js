@@ -135,9 +135,38 @@ function setTimeBlockClass() {
 
         $("#nineButton").on("click",function(){   
             var nine = $.trim($("#nineText").val());          
-                localStorage.setItem ('nine', nine);               
+                localStorage.setItem ('Nine', nine);               
          })
-
-         
-
+         $("#tenButton").on("click",function(){   
+            var ten = $.trim($("#TenText").val());          
+                localStorage.setItem ('Ten', ten);               
+         })
+         $("#elevenButton").on("click",function(){   
+            var eleven = $.trim($("#elevenText").val());          
+                localStorage.setItem ('Eleven', eleven);               
+         })
+         $("#noonButton").on("click",function(){   
+            var noon = $.trim($("#noonText").val());          
+                localStorage.setItem ('noon', noon);               
+         })
+         $("#oneButton").on("click",function(){   
+            var one = $.trim($("#oneText").val());          
+                localStorage.setItem ('one', one);               
+         })
+         $("#twoButton").on("click",function(){   
+            var two = $.trim($("#twoText").val());          
+                localStorage.setItem ('two', two);               
+         })
+         $("#threeButton").on("click",function(){   
+            var three = $.trim($("#nineText").val());          
+                localStorage.setItem ('three', three);               
+         })
+         $("#fourButton").on("click",function(){   
+            var four = $.trim($("#nineText").val());          
+                localStorage.setItem ('four', four);               
+         })
+         $("#fiveButton").on("click",function(){   
+            var five = $.trim($("#fiveText").val());          
+                localStorage.setItem ('five', five);               
+         })
     }
