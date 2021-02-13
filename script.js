@@ -9,7 +9,7 @@ $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 // set up time blocks for text to be color-coded
 // through classes set up in CSS and HTML for past, present and future
-function setTimeBlockClass() {
+function setTextClass() {
     if(parseInt(hour) < 09){
        $("#nineText").addClass("future");
        $("#tenText").addClass("future");
@@ -130,7 +130,8 @@ function setTimeBlockClass() {
            $("#fiveText").addClass("past");
            $("#sixText").addClass("past");
         }
-}});
+    }
+});
     // set up buttons in all fields to save input data to local storage
     function setButtons () {
 
@@ -173,7 +174,7 @@ function setTimeBlockClass() {
     }
     // pull saved field input back from local storage
 
-    Function getInput() {
+    function getInput() {
         $("#nineText").val(localStorage.getItem('nine')); 
         $("#tenText").val(localStorage.getItem('ten'));
         $("#elevenText").val(localStorage.getItem('eleven'));
@@ -185,7 +186,7 @@ function setTimeBlockClass() {
         $("#fiveText").val(localStorage.getItem('five'));
         $("#sixText").val(localStorage.getItem('six'));
     }
-    
-
-
-    }
+    // functions are called to run
+    getInput();
+    setTextClass();
+    setButtons();
