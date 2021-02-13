@@ -8,6 +8,7 @@ $(document).ready(function(){
 $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 // set up time blocks for text to be color-coded
+// through classes set up in CSS and HTML for past, present and future
 function setTimeBlockClass() {
     if(parseInt(hour) < 09){
        $("#nineText").addClass("future");
@@ -169,4 +170,22 @@ function setTimeBlockClass() {
             var five = $.trim($("#fiveText").val());          
                 localStorage.setItem ('five', five);               
          })
+    }
+    // pull saved field input back from local storage
+
+    Function getInput() {
+        $("#nineText").val(localStorage.getItem('nine')); 
+        $("#tenText").val(localStorage.getItem('ten'));
+        $("#elevenText").val(localStorage.getItem('eleven'));
+        $("#noonText").val(localStorage.getItem('noon'));
+        $("#oneText").val(localStorage.getItem('one'));
+        $("#twoText").val(localStorage.getItem('two'));
+        $("#threeText").val(localStorage.getItem('three'));
+        $("#fourText").val(localStorage.getItem('four'));
+        $("#fiveText").val(localStorage.getItem('five'));
+        $("#sixText").val(localStorage.getItem('six'));
+    }
+    
+
+
     }
