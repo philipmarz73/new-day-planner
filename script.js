@@ -137,17 +137,17 @@ function setBlock() {
     // set up buttons in all fields to save input data to local storage
     function setButtons () {
 
-        $("#nineButton").on("click",function(){   
+         $("#nineButton").on("click",function(){   
             var nine = $.trim($("#nineText").val());          
-                localStorage.setItem ('Nine', nine);               
+                localStorage.setItem ('nine', nine);               
          })
          $("#tenButton").on("click",function(){   
-            var ten = $.trim($("#TenText").val());          
-                localStorage.setItem ('Ten', ten);               
+            var ten = $.trim($("#tenText").val());          
+                localStorage.setItem ('ten', ten);               
          })
          $("#elevenButton").on("click",function(){   
             var eleven = $.trim($("#elevenText").val());          
-                localStorage.setItem ('Eleven', eleven);               
+                localStorage.setItem ('eleven', eleven);               
          })
          $("#noonButton").on("click",function(){   
             var noon = $.trim($("#noonText").val());          
