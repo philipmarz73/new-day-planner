@@ -9,7 +9,7 @@ $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 // set up time blocks for text to be color-coded
 // through classes set up in CSS and HTML for past, present and future
-function setTextClass() {
+function setBlock() {
     if(parseInt(hour) < 09){
        $("#nineText").addClass("future");
        $("#tenText").addClass("future");
@@ -20,7 +20,7 @@ function setTextClass() {
        $("#threeText").addClass("future");
        $("#fourText").addClass("future");
        $("#fiveText").addClass("future");
-       $("#sixText").addClass("future");
+       
     }
     if(parseInt(hour) < 10){
         $("#nineText").addClass("present");
@@ -32,7 +32,7 @@ function setTextClass() {
         $("#threeText").addClass("future");
         $("#fourText").addClass("future");
         $("#fiveText").addClass("future");
-        $("#sixText").addClass("future");
+        
      }
      if(parseInt(hour) < 11){
         $("#nineText").addClass("past");
@@ -44,7 +44,7 @@ function setTextClass() {
         $("#threeText").addClass("future");
         $("#fourText").addClass("future");
         $("#fiveText").addClass("future");
-        $("#sixText").addClass("future");
+       
      }
      if(parseInt(hour) < 12){
          $("#nineText").addClass("past");
@@ -56,7 +56,7 @@ function setTextClass() {
          $("#threeText").addClass("future");
          $("#fourText").addClass("future");
          $("#fiveText").addClass("future");
-         $("#sixText").addClass("future");
+         
       }
       if(parseInt(hour) < 13){
         $("#nineText").addClass("past");
@@ -68,7 +68,7 @@ function setTextClass() {
         $("#threeText").addClass("future");
         $("#fourText").addClass("future");
         $("#fiveText").addClass("future");
-        $("#sixText").addClass("future");
+       
      }
      if(parseInt(hour) < 14){
          $("#nineText").addClass("past");
@@ -80,7 +80,7 @@ function setTextClass() {
          $("#threeText").addClass("future");
          $("#fourText").addClass("future");
          $("#fiveText").addClass("future");
-         $("#sixText").addClass("future");
+         
       }
       if(parseInt(hour) < 15){
          $("#nineText").addClass("past");
@@ -92,7 +92,7 @@ function setTextClass() {
          $("#threeText").addClass("future");
          $("#fourText").addClass("future");
          $("#fiveText").addClass("future");
-         $("#sixText").addClass("future");
+         
       }
       if(parseInt(hour) < 16){
           $("#nineText").addClass("past");
@@ -104,7 +104,7 @@ function setTextClass() {
           $("#threeText").addClass("present");
           $("#fourText").addClass("future");
           $("#fiveText").addClass("future");
-          $("#sixText").addClass("future");
+          
        }
        if(parseInt(hour) < 17){
         $("#nineText").addClass("past");
@@ -116,20 +116,9 @@ function setTextClass() {
         $("#threeText").addClass("past");
         $("#fourText").addClass("present");
         $("#fiveText").addClass("future");
-        $("#sixText").addClass("future");
+       
      }
-       if(parseInt(hour) < 24){
-           $("#nineText").addClass("past");
-           $("#tenText").addClass("past");
-           $("#elevenText").addClass("past");
-           $("#noonText").addClass("past");
-           $("#oneText").addClass("past");
-           $("#twoText").addClass("past");
-           $("#threeText").addClass("past");
-           $("#fourText").addClass("past");
-           $("#fiveText").addClass("past");
-           $("#sixText").addClass("past");
-        }
+       
     }
 });
     // set up buttons in all fields to save input data to local storage
@@ -160,11 +149,11 @@ function setTextClass() {
                 localStorage.setItem ('two', two);               
          })
          $("#threeButton").on("click",function(){   
-            var three = $.trim($("#nineText").val());          
+            var three = $.trim($("#threeText").val());          
                 localStorage.setItem ('three', three);               
          })
          $("#fourButton").on("click",function(){   
-            var four = $.trim($("#nineText").val());          
+            var four = $.trim($("#fourText").val());          
                 localStorage.setItem ('four', four);               
          })
          $("#fiveButton").on("click",function(){   
@@ -184,9 +173,9 @@ function setTextClass() {
         $("#threeText").val(localStorage.getItem('three'));
         $("#fourText").val(localStorage.getItem('four'));
         $("#fiveText").val(localStorage.getItem('five'));
-        $("#sixText").val(localStorage.getItem('six'));
+        
     }
     // functions are called to run
     getInput();
-    setTextClass();
+    setBlock();
     setButtons();
