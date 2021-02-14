@@ -7,6 +7,8 @@ $(document).ready(function(){
 // set up Moment.js to show current time and date
 $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
+var hour = moment().format("HH");
+console.log("the current hour is: "+ hour);
 // set up time blocks for text to be color-coded
 // through classes set up in CSS and HTML for past, present and future
 function setBlock() {
@@ -118,9 +120,20 @@ function setBlock() {
         $("#fiveText").addClass("future");
        
      }
+     if(parseInt(hour) < 24){
+        $("#nineText").addClass("past");
+        $("#tenText").addClass("past");
+        $("#elevenText").addClass("past");
+        $("#noonText").addClass("past");
+        $("#oneText").addClass("past");
+        $("#twoText").addClass("past");
+        $("#threeText").addClass("past");
+        $("#fourText").addClass("past");
+        $("#fiveText").addClass("past");
        
+     }  
     }
-});
+// });
     // set up buttons in all fields to save input data to local storage
     function setButtons () {
 
@@ -179,3 +192,4 @@ function setBlock() {
     getInput();
     setBlock();
     setButtons();
+});
